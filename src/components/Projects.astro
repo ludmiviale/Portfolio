@@ -1,0 +1,74 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+const PROJECTS = [
+  {
+    date: "nov. 2023 - dez. 2023",
+    title: "ConnectInk",
+    subtitle: "Experiência acadêmica. Projeto Final. Henry Bootcamp.",
+    description:
+      "ConnectInk é uma plataforma projetada para lidar eficientemente com a gestão de agendamentos no setor de tatuagem, oferecendo uma solução escalável para tatuadores que buscam otimizar a organização do seu trabalho. Este projeto fornece uma infraestrutura robusta que facilita a administração de horários e a interconexão entre tatuadores e clientes.",
+    image: "ConnectInkImg.png",
+    deploy: "https://connectink.vercel.app/",
+    repository: "https://github.com/ludmiviale/ConnectInk",
+    video: "https://youtu.be/NOnSSYYX4lw",
+    technologies: {
+      javascript: "javascript.png",
+      react: "react.png",
+      redux: "redux.png",
+      next: "next.png",
+      cloudinary: "cloudinary.png",
+      tailwind: "tailwind.png",
+      node: "node.png",
+      express: "express.png",
+      nodemailer: "nodemailer.png",
+      mercadopago: "mercadopago.png",
+      postgresql: "postgresql.png",
+      sequelize: "sequelize.png",
+    },
+  },
+  {
+    date: "oct. 2023 - nov. 2023",
+    title: "Dogs Finder",
+    subtitle: "Experiência acadêmica. Projeto Individual. Henry Bootcamp.",
+    description:
+      "Esta página permite explorar a variedade existente de raças de cães, incluindo uma foto e uma descrição de cada uma. Admite a busca por nome ou por temperamento, ordenando-as alfabeticamente ou por peso. Além disso, oferece a possibilidade de criar novas raças de cães, salvá-las no banco de dados e também excluí-las.",
+    image: "DogsImg.png",
+    repository: "https://github.com/ludmiviale/PI-Dogs-main",
+    technologies: {
+      javascript: "javascript.png",
+      react: "react.png",
+      redux: "redux.png",
+      vite: "vite.png",
+      css: "css.png",
+      node: "node.png",
+      express: "express.png",
+      postgresql: "postgresql.png",
+      sequelize: "sequelize.png",
+    },
+  } /*
+  {
+    date: "oct. 2023 - nov. 2023",
+    title: "Rick and Morty",
+    subtitle: "Experiência acadêmica. Projeto Integrador. Henry Bootcamp.",
+    description:
+      "Este aplicativo possibilita conhecer a diversidade de personagens da série Rick and Morty, fornecendo detalhes e fotos de cada um. Permite buscar personagens por ID ou de maneira aleatória. Conta com um formulário de login para iniciar sessão e poder adicionar personagens aos favoritos, filtrá-los por gênero, ordená-los alfabeticamente ou excluí-los.",
+    image: "RickandMortyImg.png",
+    repository: "https://github.com/ludmiviale/PI-Rickandmorty",
+    technologies: {
+      javascript: "javascript.png",
+      react: "react.png",
+      redux: "redux.png",
+      vite: "vite.png",
+      node: "node.png",
+      express: "express.png",
+      postgresql: "postgresql.png",
+      sequelize: "sequelize.png",
+    },
+  },
+  */,
+];
+---
+
+<div class="flex flex-col justify-between p-6 lg:flex-row">
+  {PROJECTS.map((project) => <ProjectItem {...project} />)}
+</div>

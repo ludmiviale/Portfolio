@@ -1,0 +1,118 @@
+---
+export interface Props {
+  date: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  deploy?: string;
+  repository: string;
+  video?: string;
+  technologies: { [key: string]: string };
+}
+const {
+  date,
+  title,
+  subtitle,
+  description,
+  image,
+  deploy,
+  repository,
+  video,
+  technologies,
+} = Astro.props;
+---
+
+<div
+  class="relative flex flex-col w-full max-w-[36rem] rounded md:ml-6 md:mr-6 lg:ml-12 lg:mr-12 bg-white bg-clip-border text-gray-700 shadow-lg p-4"
+>
+  <div
+    class="relative m-8 overflow-hidden text-white shadow-lg rounded bg-blue-gray-500 bg-clip-border"
+  >
+    <img src={image} alt="project img" />
+    <div class="absolute inset-0 w-full h-full"></div>
+  </div>
+  <div class="p-6">
+    <div class="flex items-center justify-between mb-3">
+      <h5
+        class="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-purple-900"
+      >
+        {title}
+      </h5>
+      <p
+        class="flex items-center gap-1.5 font-sans text-xs font-normal leading-relaxed text-blue-gray-900 antialiased"
+      >
+        {date}
+      </p>
+    </div>
+    <p
+      class="flex items-center gap-1.5 font-sans text-xs font-normal leading-relaxed text-blue-gray-900 antialiased"
+    >
+      {subtitle}
+    </p>
+    <p
+      class="block font-sans text-sm pt-2 antialiased font-light text-justify leading-relaxed text-gray-700"
+    >
+      {description}
+    </p>
+
+    <div class="inline-flex flex-wrap justify-center gap-4 m-4 group">
+      {
+        Object.keys(technologies).map((key) => (
+          <>
+            <span
+              title={technologies[key].toUpperCase().slice(0, -4)}
+              class="rounded-full border border-purple-900/5 bg-gray-900/5 p-4 text-gray-900 transition-colors "
+            >
+              <img src={technologies[key]} alt={key} class="size-6" />
+            </span>
+          </>
+        ))
+      }
+    </div>
+  </div>
+  <div class="flex items-center justify-center gap-5 mb-2">
+    {
+      deploy ? (
+        <a
+          href={deploy}
+          target="_blank"
+          class="bg-transparent hover:bg-purple-200 text-purple-800 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded"
+          type="button"
+        >
+          Visitar página
+        </a>
+      ) : (
+        ""
+      )
+    }
+    {
+      repository ? (
+        <a
+          href={repository}
+          target="_blank"
+          class="bg-transparent hover:bg-purple-200 text-purple-800 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded"
+          type="button"
+        >
+          Repositório
+        </a>
+      ) : (
+        ""
+      )
+    }
+    {
+      video ? (
+        <a
+          href={video}
+          target="_blank"
+          class="bg-transparent hover:bg-purple-200 text-purple-800 font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded"
+          type="button"
+        >
+          Assistir video
+        </a>
+      ) : (
+        ""
+      )
+    }
+  </div>
+</div>

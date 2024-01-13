@@ -8,35 +8,44 @@ import Button from "./Button.astro";
     method="POST"
     class="space-y-4"
   >
-    <label for="email" class="block mb-2 text-md text-purple-950">
+    <label
+      for="email"
+      class="block mb-2 text-md text-purple-950 dark:text-gray-200"
+    >
       Seu email:
       <input
         type="email"
         id="email"
         name="email"
-        class="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+        class="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
         placeholder="exemplo@gmail.com"
         required
       />
     </label>
-    <label for="subject" class="block mb-2 text-md text-purple-950">
+    <label
+      for="subject"
+      class="block mb-2 text-md text-purple-950 dark:text-gray-200"
+    >
       Assunto:
       <input
         type="text"
         id="subject"
         name="subject"
-        class="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+        class="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
         placeholder="Compartilhe o motivo do seu contato"
         required
       />
     </label>
-    <label for="message" class="block mb-2 text-md text-purple-950">
+    <label
+      for="message"
+      class="block mb-2 text-md text-purple-950 dark:text-gray-200"
+    >
       Sua mensagem:
       <textarea
         id="message"
         name="message"
         rows="6"
-        class="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+        class="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
         placeholder="Digite sua mensagem aqui..."></textarea>
     </label>
     <Button type="submit">Enviar</Button>

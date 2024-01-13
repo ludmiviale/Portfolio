@@ -1,85 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Download from "../components/Download.astro";
 import Projects from "../components/Projects.astro";
 import Form from "../components/Form.astro";
 import Social from "../components/Social.astro";
+import Footer from "../components/Footer.astro";
+import Subtitle from "../components/Subtitle.astro";
+import About from "../components/About.astro";
+import Title from "../components/Title.astro";
 ---
 
 <Layout title="Bem-vindo ao meu portfólio">
   <main>
     <section class="ml-6 pb-6">
-      <h1
-        class="flex text-transparent bg-clip-text bg-gradient-to-r to-purple-950 from-purple-400 text-4xl md:text-6xl lg:text-7xl"
-      >
-        Ludmila Grisel Viale
-      </h1>
-      <h2 class="text-purple-900 text-xl md:text-3xl lg:text-4xl">
-        Desenvolvedora Web Full Stack <Download />
-      </h2>
+      <Title />
     </section>
-    <section id="sobremim" class="bg-purple-50 pb-8">
-      <h3
-        class="text-center underline underline-offset-3 decoration-8 decoration-purple-300 text-purple-950 text-xl md:text-2xl lg:text-3xl py-6"
-      >
-        Sobre mim
-      </h3>
-
-      <p class="flex items-center justify-center">
-        <span class="text-base">
-          Nasci em Santa Fe, Argentina, mas atualmente estou morando em
-          Florianópolis, Brasil</span
-        >
-        <img src="location.png" class="size-5 ml-2" alt="Location" />
-      </p>
-      <p class="text-base text-center leading-8 mx-16">
-        Possuo uma sólida formação acadêmica anterior como Professora de Música
-        e Licenciada em Educação na primeira infância, com mais de cinco anos de
-        experiência profissional lecionando em diferentes níveis educacionais.
-        Isso me permitiu desenvolver habilidades de comunicação, trabalho em
-        equipe, planejamento, adaptabilidade e pensamento criativo.
-        <br /> Além de ensinar, gosto muito de estudar e aprender coisas novas. Como
-        sempre desenvolvi mais minha faceta criativa, quis explorar e potencializar
-        meu lado mais lógico.
-        <br /> Por essa razão, há um ano e meio, decidi iniciar meus estudos em programação,
-        onde encontrei um universo fascinante.
-        <br /> Recentemente, concluí minha formação como Desenvolvedora Web Full
-        Stack e estou aberta a novos desafios no mundo profissional de TI.
-      </p>
+    <section id="sobremim" class="bg-purple-50 dark:bg-gray-800 pb-8">
+      <Subtitle>Sobre mim</Subtitle>
+      <About />
     </section>
 
     <section id="projetos">
-      <h3
-        class="text-center underline underline-offset-3 decoration-8 decoration-purple-300 text-purple-950 text-xl md:text-2xl lg:text-3xl py-8"
-      >
-        Projetos
-      </h3>
+      <Subtitle>Projetos</Subtitle>
       <Projects />
     </section>
 
     <section id="contato">
-      <h3
-        class="text-center underline underline-offset-3 decoration-8 decoration-purple-300 text-purple-950 text-xl md:text-2xl lg:text-3xl py-8"
-      >
-        Contato
-      </h3>
+      <Subtitle>Contato</Subtitle>
       <Form />
       <Social />
     </section>
-    <footer class="text-center mb-12">
-      <hr class="h-px my-8 bg-purple-200 border-0" />
-      <p class="flex items-center justify-center">
-        <span class="mr-2 text-base">Página criada com</span>
-        <img title="ASTRO" src="astro.png" class="h-5 w-5" alt="Astro" />
-        <span class="ml-2"> por Ludmila Grisel Viale</span>
-      </p>
-      <p class="flex items-center justify-center">
-        <img src="mail.png" class="size-5.5 mr-1" alt="mail" />
-        <a
-          href="mailto:ludmilaviale@gmail.com"
-          class="text-purple-900 underline">ludmilaviale@gmail.com</a
-        >
-      </p>
-    </footer>
+
+    <Footer />
   </main>
 </Layout>

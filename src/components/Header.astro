@@ -10,5 +10,15 @@ import Button from "./Button.astro";
     <Button><a href="#tecnologias">Tecnologias</a></Button>
     <Button><a href="#formacao">Formação</a></Button>
     <Button><a href="#contato">Contato</a></Button>
+    <button title="Modo noturno" id="dark"><img src="moon.png" /></button>
   </nav>
 </header>
+
+<script>
+  function changeLogo() {
+    if (document.getElementById("dark")) {
+      document.getElementsByTagName("img")[0].src = "sun.png";
+    }
+  }
+  changeLogo();
+</script>

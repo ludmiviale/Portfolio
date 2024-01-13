@@ -7,18 +7,27 @@ import Button from "./Button.astro";
     <Button><a href="#top">Início</a></Button>
     <Button><a href="#sobremim">Sobre mim</a></Button>
     <Button><a href="#projetos">Projetos</a></Button>
-    <Button><a href="#tecnologias">Tecnologias</a></Button>
-    <Button><a href="#formacao">Formação</a></Button>
     <Button><a href="#contato">Contato</a></Button>
-    <button title="Modo noturno" id="dark"><img src="moon.png" /></button>
+    <button class="theme"
+      ><img src="moon.png" alt="Modo noturno" id="dark" /></button
+    >
   </nav>
 </header>
 
 <script>
-  function changeLogo() {
-    if (document.getElementById("dark")) {
+  const changeDarkMode = () => {
+    document.documentElement.classList.toggle("dark");
+    changeLogo();
+  };
+
+  const buttonTheme = document.querySelector(".theme");
+  buttonTheme?.addEventListener("click", changeDarkMode);
+
+  const changeLogo = () => {
+    if (document.documentElement.classList.contains("dark")) {
       document.getElementsByTagName("img")[0].src = "sun.png";
+    } else {
+      document.getElementsByTagName("img")[0].src = "moon.png";
     }
-  }
-  changeLogo();
+  };
 </script>

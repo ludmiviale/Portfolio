@@ -1,16 +1,6 @@
 ---
 import Button from "./Button.astro";
-export interface Props {
-  date: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  deploy?: string;
-  repository: string;
-  video?: string;
-  technologies: { [key: string]: string };
-}
+
 const {
   date,
   title,
@@ -58,7 +48,7 @@ const {
     </p>
 
     <div
-      class="inline-flex flex-wrap justify-center gap-1 md:gap-2 lg:gap-4 m-1 lg:m-4 group"
+      class="inline-flex flex-wrap justify-center gap-1 md:gap-2 lg:gap-4 m-2 lg:m-4 group"
     >
       {
         Object.keys(technologies).map((key) => (

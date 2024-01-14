@@ -2,14 +2,16 @@
 import Button from "./Button.astro";
 ---
 
-<header class="flex justify-end m-6">
-  <nav class="flex flex-col gap-x-12 lg:flex-row">
-    <Button><a href="#top">Início</a></Button>
-    <Button><a href="#sobremim">Sobre mim</a></Button>
-    <Button><a href="#projetos">Projetos</a></Button>
-    <Button><a href="#contato">Contato</a></Button>
+<header
+  class="sticky top-0 z-50 p-3 flex justify-end bg-white dark:bg-gray-900"
+>
+  <nav class="flex gap-x-2 md:gap-x-12 text-sm md:text-base">
+    <a href="#top"><Button>Início</Button></a>
+    <a href="#sobremim"><Button>Sobre mim</Button></a>
+    <a href="#projetos"><Button>Projetos</Button></a>
+    <a href="#contato"><Button>Contato</Button></a>
     <button class="theme"
-      ><img src="moon.png" alt="Modo noturno" id="dark" /></button
+      ><img title="ALTERNAR MODO" src="moon.png" alt="Modo" id="dark" /></button
     >
   </nav>
 </header>

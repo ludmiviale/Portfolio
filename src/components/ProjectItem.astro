@@ -25,10 +25,10 @@ const {
 ---
 
 <div
-  class="relative flex flex-col w-full max-w-[36rem] rounded md:ml-6 md:mr-6 lg:ml-12 lg:mr-12 bg-white dark:bg-gray-800 bg-clip-border text-gray-700 shadow-lg p-4"
+  class="relative flex flex-col lg:max-w-[36rem] rounded md:mx-12 lg:mx-12 bg-white dark:bg-gray-800 bg-clip-border text-gray-700 lg:shadow-lg p-4"
 >
   <div
-    class="relative m-8 overflow-hidden text-white shadow-lg rounded bg-blue-gray-500 bg-clip-border"
+    class="relative m-4 lg:m-8 overflow-hidden text-white shadow-lg rounded bg-blue-gray-500 bg-clip-border"
   >
     <img src={image} alt="project img" />
     <div class="absolute inset-0 w-full h-full"></div>
@@ -57,7 +57,9 @@ const {
       {description}
     </p>
 
-    <div class="inline-flex flex-wrap justify-center gap-4 m-4 group">
+    <div
+      class="inline-flex flex-wrap justify-center gap-1 md:gap-2 lg:gap-4 m-1 lg:m-4 group"
+    >
       {
         Object.keys(technologies).map((key) => (
           <>

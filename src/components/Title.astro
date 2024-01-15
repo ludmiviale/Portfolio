@@ -16,7 +16,7 @@ import Download from "./Download.astro";
 <Download />
 
 <script>
-  function animation() {
+  const animation = () => {
     const text = [
       [
         "P",
@@ -79,7 +79,7 @@ import Download from "./Download.astro";
 
     const containerAnimation = document.getElementsByTagName("h2")[0];
 
-    function paintText() {
+    const paintText = () => {
       count++;
 
       containerAnimation.textContent += text[levelArray][count];
@@ -115,9 +115,9 @@ import Download from "./Download.astro";
           }, 150);
         }, 1000);
       }
-    }
+    };
 
     let interval = setInterval(paintText, 150);
-  }
+  };
   window.addEventListener("load", animation);
 </script>

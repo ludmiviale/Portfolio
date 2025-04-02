@@ -19,28 +19,6 @@ import Download from "./Download.astro";
   const animation = () => {
     const text = [
       [
-        "P",
-        "r",
-        "o",
-        "f",
-        "e",
-        "s",
-        "s",
-        "o",
-        "r",
-        "a",
-        " ",
-        "d",
-        "e",
-        " ",
-        "M",
-        "ú",
-        "s",
-        "i",
-        "c",
-        "a",
-      ],
-      [
         "D",
         "e",
         "s",
@@ -72,6 +50,33 @@ import Download from "./Download.astro";
         "k",
         " ",
       ],
+      [
+        "D",
+        "e",
+        "s",
+        "e",
+        "n",
+        "v",
+        "o",
+        "l",
+        "v",
+        "e",
+        "d",
+        "o",
+        "r",
+        "a",
+        " ",
+        "F",
+        "r",
+        "o",
+        "n",
+        "t",
+        "-",
+        "e",
+        "n",
+        "d",
+        " ",
+      ],
     ];
 
     let count = -1;
@@ -97,7 +102,7 @@ import Download from "./Download.astro";
               containerAnimation.textContent += element;
             });
 
-            if (count < 0) {
+            if (count < 15) {
               clearInterval(interval);
               levelArray++;
               interval = setInterval(paintText, 150);

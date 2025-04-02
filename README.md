@@ -45,6 +45,6 @@ Pode entrar em contato comigo no [LinkedIn](https://www.linkedin.com/in/ludmila-
 
 ## Visualização do meu portfólio 
 
-<img width="1253" alt="Captura de pantalla 2024-01-13 a la(s) 21 51 51" src="https://github.com/ludmiviale/Portfolio/assets/111137199/20d0e2e3-6157-4c99-9f6b-769a8cfc0342">
+<img width="1436" alt="Captura de pantalla 2025-04-02 a la(s) 17 22 54" src="https://github.com/user-attachments/assets/6cdfc9bb-44d0-487e-aae2-10fd3304bbcf" />
 
 
